@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Example</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'star' %}">Star</a>
+        <a href="{% url 'main' %}">Snow</a>
+        <a href="{% url 'firefly' %}">Firefly</a>
+    </div>
+
+    <div class="content" id="content">
+        <!-- 여기에 내용을 추가하세요 -->
+        {% block content %}
+        <div class="home_comming">welcome to my homepage!!</div>
+        {% endblock %}
+    </div>
+</body>
+</html>
