@@ -1,7 +1,7 @@
 const root = document.getElementById("root")
 root.style.cursor = 'none'
 window.addEventListener("mousemove" , (e)=>{
-    let circle = Math.floor(Math.random() * 20) + 20
+    let circle = Math.floor(Math.random() * 100) + 20
     
     // console.log(e.screenX , e.screenY)
     const span = document.createElement("span")
@@ -15,5 +15,5 @@ window.addEventListener("mousemove" , (e)=>{
     root.append(span)
     setTimeout(()=>{
         span.remove()
-    }, 100)
+    }, 1000)
 })
